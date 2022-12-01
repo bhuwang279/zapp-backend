@@ -1,0 +1,47 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "P@ssw0rd",
+    "database": "hackathon",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "port": "5432",
+    "logging": true
+  },
+  
+  "production": {
+    "username": "vvpefupmwegtfy",
+    "password": "0ce3788493cdb5a6b2cae8a8510e8ff1d26138388dd5aa8084fd927a78a25485",
+    "database": "d9h7udfs3egllf",
+    "host": "ec2-18-233-83-165.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "port": "5432",
+    "ssl":true,
+    "dialectOptions":{
+      "ssl":{
+        "require":true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "ci": {
+    "username": "akbar",
+    "password": "P@ssw0rd",
+    "database": "tcc_ci",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "port": "5432"
+  },
+  "test": {
+    "username": "akbar",
+    "password": "P@ssw0rd",
+    "database": "file-tracking-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "port": "5432"
+  }
+}
