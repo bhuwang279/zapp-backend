@@ -20,16 +20,15 @@
     "db:seed": "sequelize db:seed:all",
     "db:migrate:undo": "sequelize db:migrate:undo",
     "db:migrate:undo:all": "sequelize db:migrate:undo:all",
-    "db:migrate:test": "sequelize db:migrate --env test",
-    "db:migrate:test:undo": "sequelize db:migrate:undo --env test",
+    "db:migrate:stag": "sequelize db:migrate --env staging",
+    "db:migrate:stag:undo": "sequelize db:migrate:undo --env staging",
     "db:migrate:test:undo:all": "sequelize db:migrate:undo:all --env test",
-    "db:seed:test": "sequelize db:seed:all --env test",
+    "db:seed:stag": "sequelize db:seed:all --env staging",
     "db:migrate:prod:undo": "sequelize db:migrate:undo --env production",
     "db:migrate:prod": "sequelize db:migrate --env production",
     "db:seed:prod": "sequelize db:seed:all --env production",
     "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
     "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;"
-
   },
   "keywords": [],
   "author": "bhuwan@mybhutan.com",
@@ -46,6 +45,7 @@
     "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
+    "@babel/cli": "^7.19.3",
     "@sendgrid/mail": "^7.4.5",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",

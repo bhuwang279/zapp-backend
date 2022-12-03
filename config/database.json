@@ -9,6 +9,22 @@
     "port": "5432",
     "logging": true
   },
+   "staging": {
+    "username": "avnadmin",
+    "password": "ufdhm575l63b2xy1",
+    "database": "zapp",
+    "host": "pg-3135a235-brian-e38d.aivencloud.com",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "port": "18598",
+    "ssl":true,
+    "dialectOptions":{
+       "ssl":{
+        "require":true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
   
   "production": {
     "username": "vvpefupmwegtfy",
