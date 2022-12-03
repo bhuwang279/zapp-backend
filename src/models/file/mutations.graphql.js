@@ -11,7 +11,7 @@ import FileService from "./fileService";
 import {
   CustomSuccessResponse,
   GraphQLRemoveEntityInput,
-} from "../../helpers/customGraphqlTypes";
+} from "../../helpers/ZappGraphQLTypes";
 const mutations = {
   createFile: {
     type: FileType,

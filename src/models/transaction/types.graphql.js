@@ -11,7 +11,7 @@ import {
 } from "graphql";
 import { GraphQLDateTime } from "graphql-iso-date";
 import { BANKING_APPS } from "../../helpers/consts";
-import { PageInfoType } from "../../helpers/customGraphqlTypes";
+import { PageInfoType } from "../../helpers/ZappGraphQLTypes";
 import { metaFieldOptions } from "../../helpers/graphql";
 import { toGraphQLEnum } from "../../helpers/utils";
 import { getAppURL } from "../../helpers/utils";

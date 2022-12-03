@@ -26,7 +26,7 @@ import UserService from "./userService";
 import {
   CustomSuccessResponse,
   GraphQLRemoveEntityInput,
-} from "../../helpers/customGraphqlTypes";
+} from "../../helpers/ZappGraphQLTypes";
 import { USER_ROLES } from "../../helpers/consts";
 const mutations = {
   createUser: {

@@ -3,7 +3,7 @@ import { GraphQLInt } from "graphql";
 import { GraphQLInputObjectType } from "graphql";
 import { GraphQLObjectType, GraphQLString, GraphQLID } from "graphql";
 import { GraphQLNonNull } from "graphql";
-import { PageInfoType } from "../../helpers/customGraphqlTypes";
+import { PageInfoType } from "../../helpers/ZappGraphQLTypes";
 import { metaFieldOptions } from "../../helpers/graphql";
 const { GraphQLUpload } = require("graphql-upload");
 
