@@ -50,6 +50,12 @@ if (process.env.DATABASE_URL) {
     {
       dialect: "postgres",
       operatorsAliases,
+      dialectOptions: {
+        ssl: {
+          require: !!(process.env.DATABASE_URL.indexOf("sslmode=require") > 0),
+          rejectUnauthorized: false,
+        },
+      },
     }
   );
 }
