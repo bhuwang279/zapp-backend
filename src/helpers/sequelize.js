@@ -36,29 +36,21 @@ const operatorsAliases = {
   $values: Op.values,
   $col: Op.col,
 };
-let pg;
-if (process.env.DATABASE_URL) {
-  pg = new Sequelize(process.env.DATABASE_URL, {
-    dialect: "postgres",
-    operatorsAliases,
-    dialectOptions: {
-      ssl: {
-        require: !!(process.env.DATABASE_URL.indexOf("sslmode=require") > 0),
-        rejectUnauthorized: false,
-      },
+const pg = new Sequelize(process.env.DATABASE_URL, {
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false, // <<<<<<< YOU NEED THIS
     },
-  });
-} else {
-  pg = new Sequelize(
-    process.env.DATABASE || process.env.TEST_DATABASE,
-    process.env.DATABASE_USER,
-    process.env.DATABASE_PASSWORD,
-    {
-      dialect: "postgres",
-      operatorsAliases,
-    }
-  );
-}
+  },
+  // logging: isDevelopment() ? console.log : null,
+  logging: console.log,
+  define: {
+    paranoid: true,
+  },
+  operatorsAliases,
+});
 require("sequelize-values")(Sequelize);
 require("./sequelize-extensions")(Model);
 const DataTypes = Sequelize;
