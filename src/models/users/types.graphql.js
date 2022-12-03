@@ -4,7 +4,7 @@ import { GraphQLInputObjectType } from "graphql";
 import { GraphQLObjectType, GraphQLString, GraphQLID } from "graphql";
 import { GraphQLNonNull } from "graphql";
 import { FILE_TYPE } from "../../helpers/consts";
-import { PageInfoType } from "../../helpers/customGraphqlTypes";
+import { PageInfoType } from "../../helpers/ZappGraphQLTypes";
 import { metaFieldOptions } from "../../helpers/graphql";
 import { read } from "../../helpers/permission-scopes";
 
