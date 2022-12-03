@@ -8,7 +8,7 @@ import {
   GraphQLString,
 } from "graphql";
 import { removeEntityFields, successResponse } from "./graphql";
-export const PageInfoType = new GraphQLObjectType({
+const PageInfoType = new GraphQLObjectType({
   name: "PageInfo",
   description: "Represents Page Info Type",
   fields: () => ({
@@ -19,7 +19,7 @@ export const PageInfoType = new GraphQLObjectType({
   }),
 });
 
-export const NameKeyType = new GraphQLObjectType({
+const NameKeyType = new GraphQLObjectType({
   name: "NameKey",
   description: "Represents Name Key Type",
   fields: () => ({
@@ -28,7 +28,7 @@ export const NameKeyType = new GraphQLObjectType({
   }),
 });
 
-export const ListConnectionType = new GraphQLObjectType({
+const ListConnectionType = new GraphQLObjectType({
   name: "ListConnection",
   description: "Represents List Connection",
   fields: () => ({
@@ -37,14 +37,21 @@ export const ListConnectionType = new GraphQLObjectType({
   }),
 });
 
-export const CustomSuccessResponse = new GraphQLObjectType({
+const CustomSuccessResponse = new GraphQLObjectType({
   name: "Success",
   fields: successResponse,
 });
 
-export const GraphQLRemoveEntityInput = new GraphQLNonNull(
+const GraphQLRemoveEntityInput = new GraphQLNonNull(
   new GraphQLInputObjectType({
     name: "RemoveEntity",
     fields: removeEntityFields,
   })
 );
+module.exports = {
+  PageInfoType,
+  NameKeyType,
+  ListConnectionType,
+  CustomSuccessResponse,
+  GraphQLRemoveEntityInput,
+};
