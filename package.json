@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend for hackthon",
   "main": "index.js",
+  "type": "module",
   "engines": {
     "node": "12.13.1",
     "npm": "6.14.9"
@@ -12,7 +13,7 @@
     "build-babel": "babel -d ./build ./src -s",
     "dev": "nodemon --exec babel-node src/index.js",
     "build": "npm run clean && npm run build-babel",
-    "start": "nodemon --exec babel-node src/index.js",
+    "start": "npm run build && node ./build/index.js",
     "test": "mocha --require @babel/register 'src/**/*.spec.js'",
     "test-server": "TEST_DATABASE=tcc_test npm start",
     "db:migrate": "sequelize db:migrate",
@@ -40,7 +41,7 @@
     "chai": "^4.2.0",
     "husky": "^4.2.5",
     "mocha": "^8.1.1",
-    "nodemon": "^2.0.20",
+    "nodemon": "^2.0.4",
     "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
